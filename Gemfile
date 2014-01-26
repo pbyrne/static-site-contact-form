@@ -1,7 +1,9 @@
 source "https://rubygems.org"
-ruby "2.1.0"
+ruby "2.1.1"
 
 gem "foreman"
+gem "newrelic_rpm"
+gem "pony"
 gem "sinatra"
 gem "unicorn"
 
