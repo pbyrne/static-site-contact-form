@@ -31,7 +31,8 @@ Deploying
 ---------
 
 Built to be deployed to Heroku, and the documentation that follows reflects
-this, but you can do whatever you want.
+this, but you can do whatever you want. For information about deploying an app
+to Heroku, check out [their docs][heroku-quickstart].
 
 Configuring
 -----------
@@ -97,3 +98,5 @@ TODOs
 * Robust test suite
 * JS endpoint to return some JSON upon success, to be handled by the sending page?
 * Some type of CSRF protection?
+
+[heroku-quickstart]:https://devcenter.heroku.com/articles/quickstart
