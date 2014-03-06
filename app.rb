@@ -25,6 +25,7 @@ class App < Sinatra::Application
 
     Pony.mail(
       to: DELIVERY_CONFIG.recipient,
+      from: DELIVERY_CONFIG.sender,
       subject: "Contact Form Submission",
       body: form_contents,
     )

@@ -7,6 +7,7 @@ class DeliveryConfig
   SMTP_KEY = "DELIVERY_SERVER"
   SENDGRID_KEY = "SENDGRID_USERNAME"
   RECIPIENT_KEY = "RECIPIENT"
+  SENDER_KEY = "SENDER"
   REDIRECT_KEY = "REDIRECT"
 
   def initialize(env={})
@@ -25,6 +26,10 @@ class DeliveryConfig
 
   def recipient
     @env.fetch(RECIPIENT_KEY)
+  end
+
+  def sender
+    @env.fetch(SENDER_KEY) { recipient }
   end
 
   def redirect

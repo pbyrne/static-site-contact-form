@@ -72,6 +72,14 @@ variable.
 heroku config:set RECIPIENT=hello@example.com
 ```
 
+### Sender
+
+You can optionally specify the email address that these emails come from with the SENDER environment variable. If not configured, defaults to the recipient email address.
+
+```
+heroku config:set SENDER=no-reply@example.com
+```
+
 ### Redirect
 
 You can optionally specify a URL (thank-you page, perhaps) to redirect the

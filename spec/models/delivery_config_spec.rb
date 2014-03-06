@@ -63,6 +63,23 @@ describe DeliveryConfig do
 
   end
 
+  describe "#sender" do
+
+    let(:sender) { "bar@example.com" }
+    let(:recipient) { "foo@example.com" }
+
+    it "parses from SENDER" do
+      subject = DeliveryConfig.new("SENDER" => sender)
+      expect(subject.sender).to eq(sender)
+    end
+
+    it "defaults to recipient" do
+      subject = DeliveryConfig.new("RECIPIENT" => recipient)
+      expect(subject.sender).to eq(subject.recipient)
+    end
+
+  end
+
   describe "#redirect" do
 
     let(:redirect) { "http://example.com" }
