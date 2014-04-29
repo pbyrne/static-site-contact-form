@@ -1,4 +1,5 @@
 require "spec_helper"
+require_relative "../app"
 
 describe App do
   let(:app) { App }
@@ -7,7 +8,7 @@ describe App do
     it "responds" do
       get "/"
       expect(last_response).to be_ok
-      expect(last_response).to match("Test")
+      expect(last_response).to match("Contact form")
     end
   end
 

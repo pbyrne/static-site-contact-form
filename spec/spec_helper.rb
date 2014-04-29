@@ -2,6 +2,9 @@ ENV["RACK_ENV"] = "test"
 
 require "rspec"
 require "rack/test"
+require "dotenv"
+
+Dotenv.load! ".env.test"
 
 RSpec.configure do |config|
   # def with_env_vars(vars)
