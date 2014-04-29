@@ -19,13 +19,11 @@ class App < Sinatra::Application
     form_contents = params.map do |key, value|
       "#{key}: #{value}"
     end.join("\n")
-    puts "Sending:", form_contents
-    puts "Referer: #{request.referer}"
-    puts "Pony config: #{Pony.options.inspect}"
 
     Pony.mail(
       to: DELIVERY_CONFIG.recipient,
       from: DELIVERY_CONFIG.sender,
+      reply_to: params[:email],
       subject: "Contact Form Submission",
       body: form_contents,
     )
