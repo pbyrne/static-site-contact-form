@@ -6,6 +6,6 @@ COPY Gemfile* /app/
 RUN bundle install
 
 COPY . /app
-EXPOSE 5000
+EXPOSE 8080
 
 CMD ["bundle", "exec", "unicorn", "-c", "/app/unicorn.rb"]
